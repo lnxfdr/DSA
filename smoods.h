@@ -10,6 +10,7 @@
                                                                                                           \
     void     (*_initialize)(struct type##_smoods* d);                                                     \
     void     (*_dispose)(struct type##_smoods* s);                                                        \
+    void     (*_change_sizing_factor)(struct type##_smoods* s, const float new_factor);                   \
     int64_t  (*_front_index)(struct type##_smoods* s, const uint32_t pos, const uint32_t capacity);       \
     int64_t  (*_back_index)(struct type##_smoods* s, const uint32_t pos, const uint32_t capacity);        \
     int64_t  (*_next_index)(struct type##_smoods* s, const uint32_t pos, const uint32_t capacity);        \
@@ -60,6 +61,13 @@
                                                                                                           \
     free(s->data);                                                                                        \
     s->data = NULL;                                                                                       \
+  }                                                                                                       \
+                                                                                                          \
+  void type##_change_sizing_factor(type##_smoods* s, const float new_factor) {                            \
+    if (s == NULL)                                                                                        \
+      return;                                                                                             \
+                                                                                                          \
+    s->sizing_factor = new_factor;                                                                        \
   }                                                                                                       \
                                                                                                           \
   int64_t type##_front_index(type##_smoods* s, const uint32_t i, const uint32_t capacity) {               \
@@ -345,6 +353,7 @@
 #define BUILD_SMOODS(s, type)                                                                             \
   s._initialize = type##_initialize;                                                                      \
   s._dispose = type##_dispose;                                                                            \
+  s._change_sizing_factor = type##_change_sizing_factor;                                                  \
   s._front_index = type##_front_index;                                                                    \
   s._back_index = type##_back_index;                                                                      \
   s._next_index = type##_next_index;                                                                      \
