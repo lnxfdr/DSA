@@ -1,4 +1,4 @@
-S.M.O.O.D.S
+DSA
 
-A dynamically allocated contiguous memory data structure with various functionality for personal use.
+A set of data structures and algorithms with various functionality for personal use and learning potential.
 If anyone sees this I would appreciate any helpful suggestions as I am new to coding.
