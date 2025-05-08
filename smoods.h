@@ -375,6 +375,4 @@
   s._clear = type##_clear;
 
 #endif
-// Smoods Coding Practices :
-// Indexes start from 0 in both implementation and function parameters
 
