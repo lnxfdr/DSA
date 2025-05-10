@@ -1,3 +1,4 @@
+// Sequential Memory Organized and Optimized Data Structure
 #ifndef SMOODS_H
 #define SMOODS_H
 
