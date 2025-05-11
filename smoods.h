@@ -119,7 +119,7 @@
     if (s == NULL)                                                                                        \
       return;                                                                                             \
                                                                                                           \
-    type##_move_values(s, s->size + 2, size);                                                             \
+    type##_move_values(s, s->size, size);                                                                 \
                                                                                                           \
     s->front_index = size - 1;                                                                            \
     s->back_index = s->size;                                                                              \

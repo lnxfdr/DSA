@@ -72,7 +72,7 @@
     if (d == NULL)                                                                                                                \
       return NULL;                                                                                                                \
                                                                                                                                   \
-    if (pos > d->size - 1)                                                                                                        \
+    if (pos + 1 > d->size)                                                                                                        \
       return NULL;                                                                                                                \
                                                                                                                                   \
     type##_ploods_node* trav = d->root;                                                                                           \
@@ -171,9 +171,10 @@
       for (i = 0; i < d->size - pos; i++)                                                                                         \
         trav = trav->prev;                                                                                                        \
     }                                                                                                                             \
-    type##_ploods_node* new_node;                                                                                                 \
+    type##_ploods_node* new_node = (type##_ploods_node*)malloc(sizeof(type##_ploods_node));                                       \
+    new_node->value = value;                                                                                                      \
     new_node->prev = trav;                                                                                                        \
-    new_node->next = trav->next->next;                                                                                            \
+    new_node->next = trav->next;                                                                                                  \
     trav->next = new_node;                                                                                                        \
     new_node->next->prev = new_node;                                                                                              \
                                                                                                                                   \
@@ -184,7 +185,7 @@
     if (d == NULL)                                                                                                                \
       return;                                                                                                                     \
                                                                                                                                   \
-    if (pos > d->size - 1)                                                                                                        \
+    if (pos + 1 > d->size)                                                                                                        \
       return;                                                                                                                     \
     if (d->size == 0)                                                                                                             \
       return;                                                                                                                     \
