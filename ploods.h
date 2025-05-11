@@ -83,29 +83,21 @@
   }                                                                                                                               \
                                                                                                                                   \
   type##_ploods_node* type##_next_node(type##_ploods* d, type##_ploods_node* n) {                                                 \
-    if (d == NULL)                                                                                                                \
-      return NULL;                                                                                                                \
-    if (n == NULL)                                                                                                                \
+    if (d == NULL || n == NULL)                                                                                                   \
       return NULL;                                                                                                                \
                                                                                                                                   \
     return n->next;                                                                                                               \
   }                                                                                                                               \
                                                                                                                                   \
   type##_ploods_node* type##_prev_node(type##_ploods* d, type##_ploods_node* n) {                                                 \
-    if (d == NULL)                                                                                                                \
-      return NULL;                                                                                                                \
-    if (n == NULL)                                                                                                                \
+    if (d == NULL || n == NULL)                                                                                                   \
       return NULL;                                                                                                                \
                                                                                                                                   \
     return n->prev;                                                                                                               \
   }                                                                                                                               \
                                                                                                                                   \
   type type##_node_value(type##_ploods* d, type##_ploods_node* n) {                                                               \
-    if (d == NULL) {                                                                                                              \
-      type zero = {0};                                                                                                            \
-      return zero;                                                                                                                \
-    }                                                                                                                             \
-    if (n == NULL) {                                                                                                              \
+    if (d == NULL || n == NULL) {                                                                                                 \
       type zero = {0};                                                                                                            \
       return zero;                                                                                                                \
     }                                                                                                                             \
@@ -114,9 +106,7 @@
   }                                                                                                                               \
                                                                                                                                   \
   void type##_change_node_value(type##_ploods* d, type##_ploods_node* n, const type value) {                                      \
-    if (d == NULL)                                                                                                                \
-      return;                                                                                                                     \
-    if (n == NULL)                                                                                                                \
+    if (d == NULL || n == NULL)                                                                                                   \
       return;                                                                                                                     \
                                                                                                                                   \
     n->value = value;                                                                                                             \
