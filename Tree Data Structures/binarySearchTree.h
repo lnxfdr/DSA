@@ -1,6 +1,5 @@
 #ifndef BINARYSEARCHTREE_H
 #define BINARYSEARCHTREE_H
-
 #include <stdlib.h>
 #include <stdint.h>
 
