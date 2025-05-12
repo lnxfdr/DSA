@@ -41,7 +41,7 @@
                                                                                                                                   \
     d->size = 0;                                                                                                                  \
                                                                                                                                   \
-    d->root = (type##_ploods_node*)malloc(sizeof(type##_ploods_node));                                                            \
+    d->root = malloc(sizeof(type##_ploods_node));                                                                                 \
     d->curr = d->root;                                                                                                            \
   }                                                                                                                               \
                                                                                                                                   \
@@ -125,7 +125,7 @@
       return;                                                                                                                     \
     }                                                                                                                             \
     if (pos == 0) {                                                                                                               \
-      type##_ploods_node* new_root = (type##_ploods_node*)malloc(sizeof(type##_ploods_node));                                     \
+      type##_ploods_node* new_root = malloc(sizeof(type##_ploods_node));                                                          \
       new_root->value = value;                                                                                                    \
       new_root->next = d->root;                                                                                                   \
       d->root->prev = new_root;                                                                                                   \
@@ -136,7 +136,7 @@
       return;                                                                                                                     \
     }                                                                                                                             \
     if (pos == d->size) {                                                                                                         \
-      type##_ploods_node* new_curr = (type##_ploods_node*)malloc(sizeof(type##_ploods_node));                                     \
+      type##_ploods_node* new_curr = malloc(sizeof(type##_ploods_node));                                                          \
       new_curr->value = value;                                                                                                    \
       new_curr->prev = d->curr;                                                                                                   \
       d->curr->next = new_curr;                                                                                                   \
@@ -160,7 +160,7 @@
       for (i = 0; i < d->size - pos; i++)                                                                                         \
         trav = trav->prev;                                                                                                        \
     }                                                                                                                             \
-    type##_ploods_node* new_node = (type##_ploods_node*)malloc(sizeof(type##_ploods_node));                                       \
+    type##_ploods_node* new_node = malloc(sizeof(type##_ploods_node));                                                            \
     new_node->value = value;                                                                                                      \
     new_node->prev = trav;                                                                                                        \
     new_node->next = trav->next;                                                                                                  \

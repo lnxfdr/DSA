@@ -35,7 +35,7 @@
     h->size = 0;                                                                                          \
     h->capacity = 2;                                                                                      \
                                                                                                           \
-    h->data = (type*)malloc(sizeof(type) * h->capacity);                                                  \
+    h->data = malloc(sizeof(type) * h->capacity);                                                         \
   }                                                                                                       \
                                                                                                           \
   void type##_dispose(type##_minHeap* h) {                                                                \
@@ -50,7 +50,7 @@
     if (h == NULL)                                                                                        \
       return;                                                                                             \
                                                                                                           \
-    type* temp = (type*)malloc(sizeof(type) * capacity);                                                  \
+    type* temp = malloc(sizeof(type) * capacity);                                                         \
     uint32_t i;                                                                                           \
     for (i = 0; i < (h->size < capacity ? h->size : capacity); i++)                                       \
       temp[i] = h->data[i];                                                                               \

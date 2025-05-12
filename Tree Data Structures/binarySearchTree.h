@@ -49,7 +49,7 @@
                                                                                                           \
     b->size = 0;                                                                                          \
                                                                                                           \
-    b->root = (type##_bstNode*)malloc(sizeof(type##_bstNode));                                            \
+    b->root = malloc(sizeof(type##_bstNode));                                                             \
   }                                                                                                       \
                                                                                                           \
   void type##_dispose(type##_bst* b) {                                                                    \
@@ -158,7 +158,7 @@
         if (trav->left != NULL)                                                                           \
           trav = trav->left;                                                                              \
         else {                                                                                            \
-          type##_bstNode* new_node = (type##_bstNode*)malloc(sizeof(type##_bstNode));                     \
+          type##_bstNode* new_node = malloc(sizeof(type##_bstNode));                                      \
           new_node->value = value;                                                                        \
           new_node->parent = trav;                                                                        \
           trav->left = new_node;                                                                          \
@@ -172,7 +172,7 @@
         if (trav->right != NULL)                                                                          \
           trav = trav->right;                                                                             \
         else {                                                                                            \
-          type##_bstNode* new_node = (type##_bstNode*)malloc(sizeof(type##_bstNode));                     \
+          type##_bstNode* new_node = malloc(sizeof(type##_bstNode));                                      \
           new_node->value = value;                                                                        \
           new_node->parent = trav;                                                                        \
           trav->right = new_node;                                                                         \

@@ -52,7 +52,7 @@
     s->size = 0;                                                                                          \
     s->capacity = 2;                                                                                      \
                                                                                                           \
-    s->data = (type*)malloc(sizeof(type) * s->capacity);                                                  \
+    s->data = malloc(sizeof(type) * s->capacity);                                                         \
   }                                                                                                       \
                                                                                                           \
   void type##_dispose(type##_smoods* s) {                                                                 \
@@ -102,7 +102,7 @@
     if (s == NULL)                                                                                        \
       return;                                                                                             \
                                                                                                           \
-    type* temp = (type*)malloc(sizeof(type) * capacity);                                                  \
+    type* temp = malloc(sizeof(type) * capacity);                                                         \
     if (temp == NULL)                                                                                     \
       return;                                                                                             \
                                                                                                           \
