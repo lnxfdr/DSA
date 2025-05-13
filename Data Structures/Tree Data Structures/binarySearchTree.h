@@ -243,6 +243,8 @@
           trav = NULL;                                                                                    \
                                                                                                           \
           b->size--;                                                                                      \
+                                                                                                          \
+          return;                                                                                         \
         }                                                                                                 \
       }                                                                                                   \
       else if(value < trav->value)                                                                        \
