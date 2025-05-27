@@ -6,7 +6,7 @@ If anyone sees this I would appreciate any helpful suggestions as I am new to co
 Indexing in both implementation and parameters starts at 0.
 
 What's next?
-"Smart" pointers
+Smart pointers
 Tokenizer and parser
 Graphics library
 
