@@ -1,3 +1,9 @@
+kernel         : 6.13.10-200.fc41.x86_64
+kernel-headers : 6.13.3-200.fc41.x86_64
+kernel-devel   : 6.13.10-200.fc41.x86_64
+
+kernel-headers : 6.14.3-200.fc41.x86_64
+
 DSA
 
 A wide set of data structures and algorithms with various functionality for personal use and learning potential.
