@@ -3,7 +3,7 @@
 
 #define CREATE_TREEROTATION(type)                                       \
                                                                         \
-  void type##_left_rotation(type* n) {                                  \
+  void type##_left_rotate(type* n) {                                    \
     if (n == NULL)                                                      \
       return;                                                           \
                                                                         \
@@ -21,12 +21,12 @@
       n->parent = temp3;                                                \
       if (temp3->left == temp2)                                         \
         temp3->left = n;                                                \
-      if (temp->right == temp2)                                         \
+      if (temp3->right == temp2)                                        \
         temp3->right = n;                                               \
     }                                                                   \
   }                                                                     \
                                                                         \
-  void type##_right_rotation(type* n) {                                 \
+  void type##_right_rotate(type* n) {                                   \
     if (n == NULL)                                                      \
       return;                                                           \
                                                                         \
