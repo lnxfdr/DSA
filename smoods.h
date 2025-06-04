@@ -1,4 +1,4 @@
-// Sequential Memory Organized and Optimized Data Structure
+/* Sequential Memory Organized and Optimized Data Structure */
 #ifndef SMOODS_H
 #define SMOODS_H
 #include <stdlib.h>
