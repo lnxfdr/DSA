@@ -15,21 +15,6 @@
                                                                                                                                   \
   typedef struct type##_ploods {                                                                                                  \
                                                                                                                                   \
-    void                (*_initialize)(struct type##_ploods* d);                                                                  \
-    void                (*_dispose)(struct type##_ploods* d);                                                                     \
-    void                (*_make_circular)(struct type##_ploods* d);                                                               \
-    type##_ploods_node* (*_get_node)(struct type##_ploods* d, const uint32_t pos);                                                \
-    type##_ploods_node* (*_next_node)(struct type##_ploods* d, type##_ploods_node* n);                                            \
-    type##_ploods_node* (*_prev_node)(struct type##_ploods* d, type##_ploods_node* n);                                            \
-    type                (*_node_value)(struct type##_ploods* d, type##_ploods_node* n);                                           \
-    void                (*_change_node_value)(struct type##_ploods* d, type##_ploods_node* n, const type value);                  \
-    void                (*_insert)(struct type##_ploods* d, const uint32_t pos, const type value);                                \
-    void                (*_erase)(struct type##_ploods* d, const uint32_t pos);                                                   \
-    void                (*_reverse)(struct type##_ploods* d);                                                                     \
-    int64_t             (*_find)(struct type##_ploods* d, const uint32_t pos, const type value);                                  \
-    int64_t             (*_size)(struct type##_ploods* d);                                                                        \
-    int8_t              (*_empty)(struct type##_ploods* d);                                                                       \
-                                                                                                                                  \
     type##_ploods_node* root;                                                                                                     \
     type##_ploods_node* curr;                                                                                                     \
     uint32_t            size;                                                                                                     \

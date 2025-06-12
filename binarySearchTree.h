@@ -15,19 +15,6 @@
                                                                                                           \
   typedef struct type##_binarySearchTree {                                                                \
                                                                                                           \
-    void            (*_initialize)(struct type##_binarySearchTree* b);                                    \
-    void            (*_dispose)(struct type##_binarySearchTree* b);                                       \
-    type##_bstNode* (*_get_first_node)(struct type##_binarySearchTree* b);                                \
-    type##_bstNode* (*_get_last_node)(struct type##_binarySearchTree* b);                                 \
-    type##_bstNode* (*_get_node)(struct type##_binarySearchTree* b, const type value);                    \
-    type##_bstNode* (*_next_node)(struct type##_binarySearchTree* b, type##_bstNode* n);                  \
-    type##_bstNode* (*_prev_node)(struct type##_binarySearchTree* b, type##_bstNode* n);                  \
-    type            (*_node_value)(struct type##_binarySearchTree* b, type##_bstNode* n);                 \
-    void            (*_insert)(struct type##_binarySearchTree* b, const type value);                      \
-    void            (*_erase)(struct type##_binarySearchTree* b, const type value);                       \
-    int64_t         (*_size)(struct type##_binarySearchTree* b);                                          \
-    int8_t          (*_empty)(struct type##_binarySearchTree* b);                                         \
-                                                                                                          \
     type##_bstNode* root;                                                                                 \
     uint32_t        size;                                                                                 \
   } type##_bst;                                                                                           \

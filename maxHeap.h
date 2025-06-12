@@ -6,19 +6,6 @@
 #define CREATE_MAXHEAP(type)                                                                              \
                                                                                                           \
   typedef struct type##_maxHeap {                                                                         \
-                                                                                                          \
-    void     (*_initialize)(struct type##_maxHeap* h);                                                    \
-    void     (*_dispose)(struct type##_maxHeap* h);                                                       \
-    void     (*_move_values)(struct type##_maxHeap* h, const uint32_t capacity);                          \
-    void     (*_change_sizing_factor)(struct type##_maxHeap* h, const float new_factor);                  \
-    void     (*_reserve)(struct type##_maxHeap* h, const uint32_t capacity);                              \
-    void     (*_push)(struct type##_maxHeap* h, const type value);                                        \
-    void     (*_pop)(struct type##_maxHeap* h);                                                           \
-    type     (*_top)(struct type##_maxHeap* h);                                                           \
-    int64_t  (*_size)(struct type##_maxHeap* h);                                                          \
-    int64_t  (*_capacity)(struct type##_maxHeap* h);                                                      \
-    int8_t   (*_empty)(struct type##_maxHeap* h);                                                         \
-                                                                                                          \
     float    sizing_factor;                                                                               \
                                                                                                           \
     type*    data;                                                                                        \

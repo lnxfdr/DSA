@@ -7,30 +7,6 @@
 #define CREATE_SMOODS(type)                                                                               \
                                                                                                           \
   typedef struct type##_smoods {                                                                          \
-                                                                                                          \
-    void     (*_initialize)(struct type##_smoods* d);                                                     \
-    void     (*_dispose)(struct type##_smoods* s);                                                        \
-    void     (*_change_sizing_factor)(struct type##_smoods* s, const float new_factor);                   \
-    int64_t  (*_front_index)(struct type##_smoods* s, const uint32_t pos, const uint32_t capacity);       \
-    int64_t  (*_back_index)(struct type##_smoods* s, const uint32_t pos, const uint32_t capacity);        \
-    int64_t  (*_next_index)(struct type##_smoods* s, const uint32_t pos, const uint32_t capacity);        \
-    int64_t  (*_prev_index)(struct type##_smoods* s, const uint32_t pos, const uint32_t capacity);        \
-    void     (*_reserve)(struct type##_smoods* s, const uint32_t size);                                   \
-    void     (*_push_front)(struct type##_smoods* s, const type value);                                   \
-    void     (*_push_back)(struct type##_smoods* s, const type value);                                    \
-    void     (*_insert)(struct type##_smoods* s, const uint32_t pos, const type value);                   \
-    void     (*_pop_front)(struct type##_smoods* s);                                                      \
-    void     (*_pop_back)(struct type##_smoods* s);                                                       \
-    void     (*_erase)(struct type##_smoods* s, const uint32_t pos);                                      \
-    void     (*_reverse)(struct type##_smoods* s);                                                        \
-    int64_t  (*_find)(struct type##_smoods* s, const uint32_t pos, const type value);                     \
-    type     (*_at)(struct type##_smoods* s, const uint32_t pos);                                         \
-    void     (*_change_at)(struct type##_smoods* s, const uint32_t pos, const type value);                \
-    int64_t  (*_size)(struct type##_smoods* s);                                                           \
-    int64_t  (*_capacity)(struct type##_smoods* s);                                                       \
-    int8_t   (*_empty)(struct type##_smoods* s);                                                          \
-    void     (*_clear)(struct type##_smoods* s);                                                          \
-                                                                                                          \
     float    sizing_factor;                                                                               \
                                                                                                           \
     type*    data;                                                                                        \
@@ -349,30 +325,6 @@
                                                                                                           \
     s->size = 0;                                                                                          \
 }
-
-#define BUILD_SMOODS(s, type)                                                                             \
-  s._initialize = type##_initialize;                                                                      \
-  s._dispose = type##_dispose;                                                                            \
-  s._change_sizing_factor = type##_change_sizing_factor;                                                  \
-  s._front_index = type##_front_index;                                                                    \
-  s._back_index = type##_back_index;                                                                      \
-  s._next_index = type##_next_index;                                                                      \
-  s._prev_index = type##_prev_index;                                                                      \
-  s._reserve = type##_reserve;                                                                            \
-  s._push_front = type##_push_front;                                                                      \
-  s._push_back = type##_push_back;                                                                        \
-  s._insert = type##_insert;                                                                              \
-  s._pop_front = type##_pop_front;                                                                        \
-  s._pop_back = type##_pop_back;                                                                          \
-  s._erase = type##_erase;                                                                                \
-  s._reverse = type##_reverse;                                                                            \
-  s._find = type##_find;                                                                                  \
-  s._at = type##_at;                                                                                      \
-  s._change_at = type##_change_at;                                                                        \
-  s._size = type##_size;                                                                                  \
-  s._capacity = type##_capacity;                                                                          \
-  s._empty = type##_empty;                                                                                \
-  s._clear = type##_clear;
 
 #endif
 
