@@ -261,21 +261,5 @@
     return d->size == 0;                                                                                                          \
   }
 
-#define BUILD_PLOODS(d, type)                                                                                                     \
-  d._initialize = type##_initialize;                                                                                              \
-  d._dispose = type##_dispose;                                                                                                    \
-  d._make_circular = type##_make_circular;                                                                                        \
-  d._get_node = type##_get_node;                                                                                                  \
-  d._next_node = type##_next_node;                                                                                                \
-  d._prev_node = type##_prev_node;                                                                                                \
-  d._node_value = type##_node_value;                                                                                              \
-  d._change_node_value = type##_change_node_value;                                                                                \
-  d._insert = type##_insert;                                                                                                      \
-  d._erase = type##_erase;                                                                                                        \
-  d._reverse = type##_reverse;                                                                                                    \
-  d._find = type##_find;                                                                                                          \
-  d._size = type##_size;                                                                                                          \
-  d._empty = type##_empty;
-
 #endif
 

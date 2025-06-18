@@ -255,18 +255,4 @@
     return b->size == 0;                                                                                  \
   }
 
-#define BUILD_BST(b, type)                                                                                \
-  b._initialize = type##_initialize;                                                                      \
-  b._dispose = type##_dispose;                                                                            \
-  b._get_first_node = type##_get_first_node;                                                              \
-  b._get_last_node = type##_get_last_node;                                                                \
-  b._get_node = type##_get_node;                                                                          \
-  b._next_node = type##_next_node;                                                                        \
-  b._prev_node = type##_prev_node;                                                                        \
-  b._node_value = type##_node_value;                                                                      \
-  b._insert = type##_insert;                                                                              \
-  b._erase = type##_erase;                                                                                \
-  b._size = type##_size;                                                                                  \
-  b._empty = type##_empty;
-
 #endif

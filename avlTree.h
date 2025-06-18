@@ -258,18 +258,4 @@
     return a->size == 0;                                                                                  \
   }
 
-#define BUILD_AVL(a, type)                                                                                \
-  a._initialize = type##_initialize;                                                                      \
-  a._dispose = type##_dispose;                                                                            \
-  a._get_first_node = type##_get_first_node;                                                              \
-  a._get_last_node = type##_get_last_node;                                                                \
-  a._get_node = type##_get_node;                                                                          \
-  a._next_node = type##_next_node;                                                                        \
-  a._prev_node = type##_prev_node;                                                                        \
-  a._node_value = type##_node_value;                                                                      \
-  a._insert = type##_insert;                                                                              \
-  a._erase = type##_erase;                                                                                \
-  a._size = type##_size;                                                                                  \
-  a._empty = type##_empty;
-
 #endif

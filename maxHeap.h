@@ -189,17 +189,5 @@
     return h->size == 0;                                                                                  \
   }
 
-#define BUILD_MAXHEAP(h, type)                                                                            \
-  h._initialize = type##_initialize;                                                                      \
-  h._dispose = type##_dispose;                                                                            \
-  h._move_values = type##_move_values;                                                                    \
-  h._reserve = type##_reserve;                                                                            \
-  h._push = type##_push;                                                                                  \
-  h._pop = type##_pop;                                                                                    \
-  h._top = type##_top;                                                                                    \
-  h._size = type##_size;                                                                                  \
-  h._capacity = type##_capacity;                                                                          \
-  h._empty = type##_empty;
-
 #endif
 

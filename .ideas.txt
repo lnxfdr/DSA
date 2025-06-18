@@ -1,0 +1,3 @@
+Make a coding standards checker
+Make a better text replacer and comparer
+Make a tokenizer and parser
